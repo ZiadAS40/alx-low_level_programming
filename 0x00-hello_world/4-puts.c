@@ -1,11 +1,17 @@
 #include <stdio.h>
+
 /**
- * main that a program that's prints the belew output 
+ * main - Entry point of the program
  *
- * return :0
+ * Description: Prints the message "Programming is like building
+ *              a multilingual puzzle" using the puts function.
+ *
+ * Return: Always 0 (Success)
  */
-int main(void) {
+int main(void)
+{
     puts("\"Programming is like building a multilingual puzzle");
-    return 0;
+    return (0);
 }
+
 
