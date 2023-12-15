@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
- * main : any
- * return : (0) if sucess
- **/
+** Description: main - Prints out a string to stdout.
+** Return: 0 if success.
+*/
 
-int main (void)
+int main(void)
 {
-	int currentChar ;
+	int currentChar;
 
-	for (currentChar = 'a' ; currentChar <= 'z' ; ++ currentChar)
+	for (currentChar = 'a' ; currentChar <= 'z' ; ++currentChar)
 	{
 		putchar(currentChar);
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
