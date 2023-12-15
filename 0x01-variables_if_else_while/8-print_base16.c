@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-    char hexDigit;
+	char hexDigit;
 
-    for (hexDigit = '0'; hexDigit <= '9'; ++hexDigit)
-    {
-        putchar(hexDigit);
-    }
+	for (hexDigit = '0'; hexDigit <= '9'; ++hexDigit)
+	{
+		putchar(hexDigit);
+	}
 
-    for (hexDigit = 'a'; hexDigit <= 'f'; ++hexDigit)
-    {
-        putchar(hexDigit);
-    }
+	for (hexDigit = 'a'; hexDigit <= 'f'; ++hexDigit)
+	{
+		putchar(hexDigit);
+	}
 
-    putchar('\n');
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
 
