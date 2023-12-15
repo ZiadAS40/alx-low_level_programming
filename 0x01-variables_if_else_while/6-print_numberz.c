@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 /**
-** Description: main - Prints out a string to stdout.
-** Return: 0 if success.
-*/
-
+ * main - Prints digits from 0 to 9 using putchar
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int currentChar;
+    int i;
 
-	for (currentChar = 0 ; currentChar <= 9 ; ++currentChar)
-	{
-		putchar(currentChar);
-	}
-	putchar('\n');
-	return (0);
+    for (i = 0; i <= 9; ++i)
+    {
+        putchar('0' + i);
+    }
+
+    putchar('\n');
+
+    return 0;
 }
+
