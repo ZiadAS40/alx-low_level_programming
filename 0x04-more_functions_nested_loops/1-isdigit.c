@@ -5,7 +5,7 @@
  * Return: 1 if a digit
  */
 int _isdigit(int c)
-	}
+{
 	if (c >= 48 && c <= 57)
 	{
 		c = 1;
