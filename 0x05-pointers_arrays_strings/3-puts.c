@@ -10,6 +10,6 @@ void _puts(char *str)
 
 	for (; str[i] != '\0'; i++)
 	{
-		printf("%c", str[i]);
+		printf("%c\n", str[i]);
 	}
 }
