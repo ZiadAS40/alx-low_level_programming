@@ -4,13 +4,13 @@
  * @s: the string that we should count
  * Return: the lengh of the string
  */
-int _strlen(int *s)
+int _strlen(char *s)
 {
 	int counter;
 
 	for (int i = 0; s[i] != '\0'; i++)
 	{
-		counter++
+		counter++;
 		return (counter);
 	}
 }
