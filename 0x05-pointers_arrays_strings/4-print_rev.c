@@ -14,7 +14,7 @@ void print_rev(char *s)
 		i++;
 	}
 	j = i;
-	for (; j = 0 ; j--)
+	for (; j == 0 ; j--)
 	{
 		pritnf("%c", s[j]);
 	}
