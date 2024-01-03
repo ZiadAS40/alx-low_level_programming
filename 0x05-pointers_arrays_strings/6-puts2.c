@@ -7,7 +7,6 @@
 void puts2(char *str)
 {
 	int i = 0;
-	int j;
 
 	printf("%c", str[0]);
 	for (; str[i] != '\0'; i++)
