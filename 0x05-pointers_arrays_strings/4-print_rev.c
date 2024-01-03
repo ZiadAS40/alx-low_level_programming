@@ -7,14 +7,14 @@
 void print_rev(char *s)
 {
 	int i = 0;
-	int j;
+	int j = 0;
 
 	for (; s[i] != '\0'; i++)
 	{
-		i++;
+		j++;
 	}
-	j = i;
-	for (; j == 0 ; j--)
+	j--;
+	for (; j >= 0 ; j--)
 	{
 		printf("%c", s[j]);
 	}
