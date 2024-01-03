@@ -9,8 +9,8 @@ void puts2(char *str)
 	int i = 0;
 
 	printf("%c", str[0]);
-	for (; str[i] != '\0'; i++)
+	for (; str[i] != '\0'; i = i + 2)
 	{
-		printf("%c", str[i + 2]);
+		printf("%c", str[i]);
 	}
 }
