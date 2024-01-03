@@ -12,18 +12,6 @@ void puts2(char *str)
 	printf("%c", str[0]);
 	for (; str[i] != '\0'; i++)
 	{
-		i++;
+		printf("%c", str[i + 2];
 	}
-	if (i % 2 == 0)
-	{
-		j = i / 2;
-	} else
-	{
-		j = (i / 2) + 1;
-	}
-	for (; j <= i; j++)
-	{
-		printf("%c", str[j]);
-	}
-	printf("\n");
 }
