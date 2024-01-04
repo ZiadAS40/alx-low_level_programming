@@ -17,6 +17,7 @@ int _strcmp(char *s1, char *s2)
 				break;
 			}
 		j = *(s1 + i) - *(s2 + i);
+		i++;
 	}
 	return (j);
 }
