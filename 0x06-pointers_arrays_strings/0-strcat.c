@@ -15,23 +15,23 @@ char *_strcat(char *dest, char *src)
 
 	for (; dest[i] != '\0'; i++)
 	{
-	g++;
+		g++;
 	}
 	for (; src[j] != '\0'; j++)
 	{
-	l++;
+		l++;
 	}
 	m = g + l;
 	int s = 0;
 
 	for (; g <= m ; g++)
 	{
-	*(dest + g) = *(src + s);
-	s++;
-	if (s == l)
-	{
-		break;
-	}
+		*(dest + g) = *(src + s);
+		s++;
+			if (s == l)
+			{
+				break;
+			}
 	}
 	return (dest);
 }
