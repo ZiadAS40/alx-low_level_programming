@@ -24,14 +24,14 @@ char *_strcat(char *dest, char *src)
 	m = g + l;
 	int s = 0;
 
-	for (; g < m ; g++)
+	for (; g <= m ; g++)
 	{
-		if (s == l + 1)
+	*(dest + g) = *(src + s);
+	s++;
+	if (s == l)
 	{
 		break;
 	}
-	*(dest + g) = *(src + s);
-	s++;
 	}
 	return (dest);
 }
