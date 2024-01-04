@@ -24,7 +24,7 @@ char *_strcat(char *dest, char *src)
 	m = g + l;
 	int s = 0;
 
-	for (; g <= m ; g++)
+	for (; g < m ; g++)
 	{
 		*(dest + g) = *(src + s);
 		s++;
@@ -33,5 +33,6 @@ char *_strcat(char *dest, char *src)
 				break;
 			}
 	}
+	*(dest + m) = '\0';
 	return (dest);
 }
