@@ -26,7 +26,7 @@ char *_strcat(char *dest, char *src)
 
 	for (; g < m ; g++)
 	{
-	if (s == l)
+		if (s == l + 1)
 	{
 		break;
 	}
