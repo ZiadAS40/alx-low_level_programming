@@ -12,7 +12,9 @@ void reverse_array(int *a, int n)
 
 	while (i >= 0)
 	{
-		if (i == j)
+		if (n % 2 != 0 && i == j)
+			break;
+		if (n % 2 == 0 && j == i + 1)
 			break;
 		l = *(a + i);
 		*(a + i) = *(a + j);
