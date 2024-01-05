@@ -10,12 +10,8 @@ void reverse_array(int *a, int n)
 	int j = n - 1;
 	int l;
 
-	while (i >= 0)
+	while (j > i)
 	{
-		if (n % 2 != 0 && i == j)
-			break;
-		if (n % 2 == 0 && j == i + 1)
-			break;
 		l = *(a + i);
 		*(a + i) = *(a + j);
 		*(a + j) = l;
