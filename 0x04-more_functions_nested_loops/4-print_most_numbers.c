@@ -12,7 +12,7 @@ void print_numbers(void)
 	{
 		if (i == '2' || i== '4')
 		{
-		break
+		break;
 		}
 		_putchar(i + 48);
 	}
