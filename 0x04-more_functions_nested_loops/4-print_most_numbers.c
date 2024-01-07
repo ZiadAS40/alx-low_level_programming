@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - Prints the numbers (0 - 9) except (2,4) followed by new line.
+ * print_numbers - Prints the numbers (0 - 9) except (2,4) followed by '\n'.
  *
  * Return: void
  */
@@ -10,9 +10,9 @@ void print_numbers(void)
 
 	for (; i <= '9' ; i++)
 	{
-		if (i == '2' || i== '4')
+		if (i == '2' || i == '4')
 		{
-		break;
+		continue;
 		}
 		_putchar(i + 48);
 	}
