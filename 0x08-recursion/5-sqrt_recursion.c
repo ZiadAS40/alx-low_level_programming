@@ -4,17 +4,18 @@
  * @n: intger.
  * Return: n.
  */
+int sqr(int n, int i);
 int _sqrt_recursion(int n)
 {
-	_sqr(n, 1);
+	sqr(n, 1);
 }
 /**
- * _sqr - sub function to get the square root.
+ * sqr - sub function to get the square root.
  * @n: the number.
  * @i: the parameter.
  * Return: square.
  */
-int _sqr(int n, int i)
+int sqr(int n, int i)
 {
 	if (n < 0)
 	{
@@ -28,5 +29,5 @@ int _sqr(int n, int i)
 	{
 		return (i);
 	}
-	return (_sqr(n, i + 1));
+	return (sqr(n, i + 1));
 }
