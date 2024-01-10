@@ -4,7 +4,6 @@
  * @n: intger.
  * Return: n.
  */
-int sqr(int n, int i);
 int _sqrt_recursion(int n)
 {
 	sqr(n, 1);
