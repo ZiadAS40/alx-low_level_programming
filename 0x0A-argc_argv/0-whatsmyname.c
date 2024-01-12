@@ -5,7 +5,7 @@
  * @argv: an array that contains the arguments.
  * Return: 0.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	(void)argc;
 	printf("%s", argv[0]);
