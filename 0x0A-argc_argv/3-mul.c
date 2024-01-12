@@ -12,9 +12,6 @@ int mian(int argc, char *argv[])
 		printf("error\n");
 		return (1);
 	}
-	if (argc >= 3)
-	{
-		printf("%d\n", argv[1] * argv[2]);
-	}
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
