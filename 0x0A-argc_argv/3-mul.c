@@ -6,7 +6,7 @@
  * @argv: the arguments.
  * Return: 0.
  */
-int mian(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
