@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * mian - a function that multiply two numbers.
+ * main - a function that multiply two numbers.
  * @argc: the number of arguments.
  * @argv: the arguments.
  * Return: 0.
