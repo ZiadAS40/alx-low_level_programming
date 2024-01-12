@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * mian - a function that multiply two numbers.
  * @argc: the number of arguments.
@@ -7,7 +8,7 @@
  */
 int mian(int argc, char *argv[])
 {
-	if (argc < 3)
+	if (argc != 3)
 	{
 		printf("error\n");
 		return (1);
