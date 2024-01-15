@@ -18,8 +18,7 @@ char *create_array(unsigned int size, char c)
 	{
 		if (a == NULL)
 		{
-			printf("failed to allocate memory");
-			return (0);
+			return ("failed to allocate memory");
 		}
 		a[i] = c;
 	}
