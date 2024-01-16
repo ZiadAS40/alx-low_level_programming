@@ -11,7 +11,7 @@ void free_grid(int **grid, int height)
 {
 	int i, j, width;
 
-	width = sizeof(grid[0]) / sizeof(grid[0][0]);
+	width = sizeof(grid) / height;
 	for (i = 0; i < height; i++)
 	{
 	for (j = 0; j < width; j++)
