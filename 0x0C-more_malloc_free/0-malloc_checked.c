@@ -4,13 +4,14 @@
 #include <limits.h>
 /**
  * malloc_checked - create a memory allocation for an intger.
- * b: the intger.
+ * @b: the intger.
  * Return: 0.
  */
 void *malloc_checked(unsigned int b)
 {
 	unsigned int *a;
-	int i;
+	int i = 0;
+
 	a = &b;
 	while (b > 0)
 	{
@@ -22,4 +23,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
+	return (a);
 }
