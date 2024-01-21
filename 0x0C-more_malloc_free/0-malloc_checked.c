@@ -10,15 +10,8 @@
 void *malloc_checked(unsigned int b)
 {
 	unsigned int *a;
-	int i = 0;
 
 	a = &b;
-	while (b > 0)
-	{
-		b /= 10;
-		i++;
-	}
-	a = malloc(i);
 	if (a == NULL)
 	{
 		exit(98);
