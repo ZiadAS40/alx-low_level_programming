@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "dog.h"
 /**
  * init_dog - assign a values to the strucure dog.
  * @d: the structure.
