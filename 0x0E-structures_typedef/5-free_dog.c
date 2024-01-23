@@ -6,7 +6,7 @@
  * Description: structure of a dog's name, age and owner.
  * Return: 0.
  */
-void free_dog(dot_t *d)
+void free_dog(dog_t *d)
 {
 	if (d != NULL)
 	{
