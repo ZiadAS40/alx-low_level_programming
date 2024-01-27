@@ -47,4 +47,5 @@ if (format[i + 1] != '\0' && j != 0)
 printf("%s", ", ");
 i++;
 }
+printf("\n");
 }
