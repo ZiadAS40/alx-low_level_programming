@@ -10,9 +10,8 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-int i = 0, j = 0, tmp = 5, c;
-double f;
-char *s, arr[5] = {'c', 'i', 'f', 's'};
+int i = 0, j = 0, tmp = 5;
+char arr[5] = {'c', 'i', 'f', 's'};
 
 va_start(args, format);
 while (format && format[i] != '\0')
@@ -36,7 +35,7 @@ case 1:
 printf("%i", va_arg(args, int));
 break;
 case 2:
-printf("%f", va_arg(args, double);
+printf("%f", va_arg(args, double));
 break;
 case 3:
 printf("%s", va_arg(args, char *));
