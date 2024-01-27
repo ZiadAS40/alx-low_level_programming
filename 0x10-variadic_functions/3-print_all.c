@@ -15,7 +15,7 @@ double f;
 char *s, arr[5] = {'c', 'i', 'f', 's'};
 
 va_start(args, format);
-while (format[i] != '\0')
+while (format && format[i] != '\0')
 {
 j = 0, tmp = 5;
 while (j < 4)
@@ -30,20 +30,16 @@ j++;
 switch (tmp)
 {
 case 0:
-c = va_arg(args, int);
-printf("%c", c);
+printf("%c", va_arg(args, int));
 break;
 case 1:
-c = va_arg(args, int);
-printf("%i", c);
+printf("%i", va_arg(args, int));
 break;
 case 2:
-f = va_arg(args, double);
-printf("%f", f);
+printf("%f", va_arg(args, double);
 break;
 case 3:
-s = va_arg(args, char *);
-printf("%s", s);
+printf("%s", va_arg(args, char *));
 break;
 }
 if (format[i + 1] != '\0' && tmp != 5)
