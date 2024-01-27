@@ -10,40 +10,43 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-int i = 0, j = 0, c;
+int i = 0, j = 0, tmp = 5, c;
 double f;
-char *s, arr[5] = {'*', 'c', 'i', 'f', 's'};
+char *s, arr[5] = {'c', 'i', 'f', 's'};
 
 va_start(args, format);
 while (format[i] != '\0')
 {
-j = 0;
-while (j < 5)
+j = 0, tmp = 5;
+while (j < 4)
 {
 if (format[i] == arr[j])
+{
+tmp = j;
 break;
+}
 j++;
 }
-switch (j)
+switch (tmp)
 {
-case 1:
+case 0:
 c = va_arg(args, int);
 printf("%c", c);
 break;
-case 2:
+case 1:
 c = va_arg(args, int);
 printf("%i", c);
 break;
-case 3:
+case 2:
 f = va_arg(args, double);
 printf("%f", f);
 break;
-case 4:
+case 3:
 s = va_arg(args, char *);
 printf("%s", s);
 break;
 }
-if (format[i + 1] != '\0' && j != 0)
+if (format[i + 1] != '\0' && tmp != 5)
 printf("%s", ", ");
 i++;
 }
