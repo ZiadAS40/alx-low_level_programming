@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * befor_main - prints befor the excution of the main function.
  * 
@@ -7,5 +8,6 @@
 
 void __attribute__ ((constructor)) befor_main()
 {
-printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+printf("You're beat! and yet, you must allow,\n");
+printf("I bore my house upon my back!\n");
 }
