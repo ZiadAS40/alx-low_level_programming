@@ -2,7 +2,7 @@
 
 /**
  * befor_main - prints befor the excution of the main function.
- * 
+ *
  * Return: 0.
 */
 
