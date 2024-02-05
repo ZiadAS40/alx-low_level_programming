@@ -1,18 +1,18 @@
 #include "lists.h"
 
 /**
- * print_listint - print list of intgers.
+ * listint_len - get the length of the list.
  * @h: listint_t.
  * Return: size_t.
 */
 
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 const listint_t *temp = h;
 size_t counter = 0;
+
 while (temp != NULL)
 {
-printf("%d\n", temp->n);
 counter++;
 temp = temp->next;
 }
