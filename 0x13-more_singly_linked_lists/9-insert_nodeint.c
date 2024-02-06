@@ -21,6 +21,8 @@ while (node != NULL && i < idx - 1)
 node = node->next;
 i++;
 }
+if (!(i == idx - 1))
+return (NULL);
 if (node == NULL)
 return (NULL);
 if (node->next == NULL)
