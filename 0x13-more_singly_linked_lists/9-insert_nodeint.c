@@ -20,10 +20,18 @@ while (node != NULL && i < idx - 1)
 {
 node = node->next;
 i++;
+}
 if (node == NULL)
 return (NULL);
+if (node->next == NULL)
+{
+temp->next = NULL;
+node->next = temp;
 }
+else
+{
 temp->next = node->next;
 node->next = temp;
+}
 return (temp);
 }
