@@ -12,7 +12,10 @@ listint_t *temp = *head;
 int n;
 
 if (head == NULL)
+{
 printf("%s\n", "(nil)");
+return (0);
+}
 else
 {
 temp = temp->next;
