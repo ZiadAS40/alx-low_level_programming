@@ -21,17 +21,17 @@ while (node != NULL && i < idx - 1)
 node = node->next;
 i++;
 }
-if (i != idx - 1)
+if (node == NULL && idx != 0)
 return (NULL);
-if (node == NULL)
-return (NULL);
-if (node->next == NULL)
+if (idx == 0)
 {
-node->next = temp;
-temp->next = NULL;
-return (temp);
+temp->next = *head;
+*head = temp;
 }
+else
+{
 temp->next = node->next;
 node->next = temp;
+}
 return (temp);
 }
