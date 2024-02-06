@@ -28,6 +28,8 @@ while (temp != NULL && i < index - 1)
 temp = temp->next;
 i++;
 }
+if (temp == NULL && index != 0)
+return (-1);
 if (temp->next == NULL)
 return (-1);
 if (i == index - 1)
