@@ -12,7 +12,12 @@ const listint_t *temp = h;
 size_t counter = 0;
 while (temp != NULL)
 {
+if (temp->n == NULL)
+printf("(nil)\n");
+else
+{
 printf("%d\n", temp->n);
+}
 counter++;
 temp = temp->next;
 }
