@@ -27,7 +27,7 @@ temp = tempTwo;
 if (tempTwo != NULL)
 tempTwo = tempTwo->next;
 }
-return (temp);
+return (temp ? temp : *head);
 }
 return (NULL);
 }
