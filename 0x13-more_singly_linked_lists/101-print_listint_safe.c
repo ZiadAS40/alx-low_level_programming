@@ -9,7 +9,8 @@
 size_t print_listint_safe(const listint_t *head)
 {
 const listint_t *temp = head;
-int i = 0, flag = 0, j;
+int flag = 0;
+size_t i = 0, j;
 const listint_t **arr = malloc(64 * sizeof(listint_t *));
 if (arr == NULL)
 exit(98);
