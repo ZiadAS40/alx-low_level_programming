@@ -8,26 +8,17 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-listint_t *temp = *head;
-listint_t *tempTwo = (*head)->next;
-
-if (*head != NULL)
-{
-while (tempTwo != NULL)
-{
-temp = temp->next;
-if (tempTwo == (*head)->next)
-{
-(*head)->next = NULL;
-}
-tempTwo = tempTwo->next;
-temp->next = *head;
-*head = temp;
-temp = tempTwo;
-if (tempTwo != NULL)
-tempTwo = tempTwo->next;
-}
-return (temp ? temp : *head);
-}
+listint_t *current = *head;
+listint_t *next;
+if (!head || !*head)
 return (NULL);
+*head = NULL;
+while (current != NULL)
+{
+next = current->next;
+current->next = *head;
+*head = current;
+current = next;
+}
+return (*head);
 }
