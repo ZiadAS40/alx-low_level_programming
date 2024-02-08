@@ -4,7 +4,8 @@
  * clear_bit - set the index bit to 0.
  * @n: the number.
  * @index: the index of the bit.
- * Return: the number of bits
+ * Return: 1 if succes
+ * -1 if fails.
 */
 
 int clear_bit(unsigned long int *n, unsigned int index)

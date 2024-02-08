@@ -11,13 +11,13 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned int i = 0, counter = 0;
+unsigned int i = 0, counter = 0;
 
-    while (i < 64)
-    {
-        if ((n & (1UL << i)) != (m & (1UL << i)))
-        counter++;
-        i++;
-    }
-    return (counter);
+while (i < 64)
+{
+if ((n & (1UL << i)) != (m & (1UL << i)))
+counter++;
+i++;
+}
+return (counter);
 }
