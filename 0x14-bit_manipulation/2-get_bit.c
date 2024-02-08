@@ -10,24 +10,13 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-unsigned long int powerTwo;
 
-if (index == 0)
-{
-if (n % 2 == 0)
-return (0);
-else
-return (1);
-}
-
-powerTwo = _longPow(2, index);
-if (powerTwo > n)
+if (_longPow(2, index) > n)
 return (-1);
-if (n >= powerTwo)
+if (n & (1UL << index))
 return (1);
 else
 return (0);
-return (-1);
 }
 
 /**
