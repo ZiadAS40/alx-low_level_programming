@@ -9,6 +9,8 @@ void print_binary(unsigned long int n)
 {
 	int i, flag = 0;
 
+	if (n == 0)
+		putchar('0');
 	for (i = 63; i >= 0; i--)
 	{
 		if ((n >> i) & 1)
