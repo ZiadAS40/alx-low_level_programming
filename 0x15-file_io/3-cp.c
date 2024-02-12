@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-	int as;
+	ssize_t as;
 
 	if (ac != 3)
 	{
