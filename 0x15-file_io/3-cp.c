@@ -24,12 +24,12 @@ int main(int ac, char **av)
 	}
 	else if (as == -2)
 	{
-		dprintf(2, "Error: Can't write to %s\n", av[1]);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	else if (as != 1 && as != -1 && as != -2)
 	{
-		dprintf(2, "Error: Can't close fd %d", as);
+		dprintf(2, "Error: Can't close fd %ld", as);
 		exit(100);
 	}
 	return (0);
@@ -44,7 +44,6 @@ ssize_t copy_files(char *filename, char *filen)
 {
 	size_t buffer_size = 1024, tbr = 0;
 	ssize_t bt, bytes_write, fd, fdT;
-	char *new_buffer;
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char *buffer = malloc(buffer_size);
 
@@ -68,8 +67,8 @@ ssize_t copy_files(char *filename, char *filen)
 			}
 		}
 	}
-	fdT = open(filen, O_RDONLY | O_CREAT | O_TRUNC, mode);
-	bytes_write = write(fd, buffer, strlen(buffer));
+	fdT = open(filen, O_WRONLY | O_CREAT | O_TRUNC, mode);
+	bytes_write = write(fdT, buffer, tbr);
 	if (bytes_write == -1)
 		return (-2);
 	free(buffer);
