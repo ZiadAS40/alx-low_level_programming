@@ -13,7 +13,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
+		dprintf(2, "Usage: cp file_from file_to");
 		exit(97);
 	}
 	as = copy_files(av[1], av[2]);
@@ -42,8 +42,7 @@ int main(int ac, char **av)
  */
 ssize_t copy_files(char *filename, char *filen)
 {
-	size_t buffer_size = 1024, tbr = 0;
-	ssize_t bt, bytes_write, fd, fdT;
+	ssize_t bt, bytes_write, fd, fdT, tbr = 0, buffer_size = 1024;
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char *buffer = malloc(buffer_size);
 
@@ -54,6 +53,8 @@ ssize_t copy_files(char *filename, char *filen)
 		return (-1);
 	while ((bt = read(fd, buffer + tbr, buffer_size - tbr)) > 0)
 	{
+		if (bt == -1)
+		return (-1);
 		tbr += bt;
 		if (tbr == buffer_size)
 		{
