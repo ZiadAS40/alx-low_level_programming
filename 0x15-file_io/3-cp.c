@@ -13,7 +13,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	as = copy_files(av[1], av[2]);
@@ -54,19 +54,12 @@ ssize_t copy_files(char *filename, char *filen)
 	while ((bt = read(fd, buffer + tbr, buffer_size - tbr)) > 0)
 	{
 		if (bt == -1)
-		return (-1);
-		tbr += bt;
-		if (tbr == buffer_size)
 		{
-			buffer_size *= 2;
-			buffer = realloc(buffer, buffer_size);
-			if (!buffer)
-			{
-				free(buffer);
-				close(fd);
-				return (-1);
-			}
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+			exit(98);
 		}
+
+		tbr += bt;
 	}
 	fdT = open(filen, O_WRONLY | O_CREAT | O_TRUNC, mode);
 	bytes_write = write(fdT, buffer, tbr);
