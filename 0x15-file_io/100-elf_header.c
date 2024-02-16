@@ -48,12 +48,7 @@ int main(int argc, char **argv)
  */
 void check_elf_format(unsigned char *e_ident)
 {
-	if (e_ident[0] != 0x7f || e_ident[1] != 'E')
-	{
-		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-		exit(98);
-	}
-	if (e_ident[2] != 'L' || e_ident[3] != 'F')
+if (e_ident[0] != 0x7f || e_ident[1] != 'E' || e_ident[2] != 'L' || e_ident[3] != 'F')
 	{
 		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 		exit(98);
