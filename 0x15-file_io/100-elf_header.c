@@ -48,7 +48,7 @@ int main(int argc, char **argv)
  */
 void check_elf_format(unsigned char *e_ident)
 {
-if (e_ident[0] != 0x7f || e_ident[1] != 'E' || e_ident[2] != 'L' || e_ident[3] != 'F')
+	if (e_ident[0] != 0x7f || e_ident[1] != 'E' || e_ident[2] != 'L' || e_ident[3] != 'F')
 	{
 		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 		exit(98);
@@ -66,6 +66,7 @@ void print_entrypoint(Elf64_Ehdr *header);
  */
 void display_elf_header_info(Elf64_Ehdr *header)
 {
+	printf("ELF Header:\n");
 	print_magic(header);
 	print_elf_header_details(header);
 	print_type(header);
