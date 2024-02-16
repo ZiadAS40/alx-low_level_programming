@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <elf.h>
 #include "main.h"
 /**
  * main - Entry point, displays the ELF header of an ELF file
@@ -48,15 +50,15 @@ void check_elf_format(unsigned char *e_ident)
 {
 	if (e_ident[0] != 0x7f || e_ident[1] != 'E')
 	{
-		if (e_ident[2] != 'L' || e_ident[3] != 'F')
-		{
-			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-			exit(98);
-		}
+		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+		exit(98);
+	}
+	if (e_ident[2] != 'L' || e_ident[3] != 'F')
+	{
+		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+		exit(98);
 	}
 }
-#include <stdio.h>
-#include <elf.h>
 
 void print_magic(Elf64_Ehdr *header);
 void print_elf_header_details(Elf64_Ehdr *header);
@@ -87,7 +89,10 @@ void print_magic(Elf64_Ehdr *header)
 		printf("%02x ", header->e_ident[i]);
 	printf("\n");
 }
-
+/**
+ * print_elf_header_details - print details :).
+ * @header: Pointer to the #lF header structure
+ */
 void print_elf_header_details(Elf64_Ehdr *header)
 {
 	printf("Class:                             ");
