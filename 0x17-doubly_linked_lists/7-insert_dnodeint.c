@@ -6,7 +6,7 @@
  * @n: the value of the new node.
  * @idx: the index of the node.
  * Return: a pointer to the first node.
-*/
+ */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -14,14 +14,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 	unsigned int counter = 0;
 
-	if (new == NULL || *h == NULL)
-	return (NULL);
+	if (new == NULL)
+		return (NULL);
 	while (temp != NULL)
 	{
-		if (counter == idx - 1)
+		if (counter == (idx == 0 ? idx : idx - 1))
 		{
-			new->next = temp->next;
-			temp->next = new;
+			if (temp->next != NULL)
+			{
+				new->next = temp->next;
+				temp->next = new;
+			}
+			else
+			new->next = NULL;
 			new->prev = temp;
 			new->n = n;
 			return (*h);
