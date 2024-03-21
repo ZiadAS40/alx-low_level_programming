@@ -3,6 +3,7 @@
  * add_dnodeint_end - adding a node in the end of
  * doubly linked list.
  * @head: pointer to pointer to the first node.
+ * @n: the value of the node.
  * Return: a pointer to the first node.
  */
 
